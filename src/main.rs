@@ -46,30 +46,12 @@ async fn main() -> Result<(), ()> {
     let data = r#"
     [
         {
-            "name": "Ubuntu",
-            "templates": [
-                { "name": "Ubuntu 18.04", "vmid": 1000, "link": "https://images.cdn.convoypanel.com/ubuntu/ubuntu-18-04-amd64.vma.zst" },
-                { "name": "Ubuntu 20.04", "vmid": 1001, "link": "https://images.cdn.convoypanel.com/ubuntu/ubuntu-20-04-amd64.vma.zst" },
-                { "name": "Ubuntu 22.04", "vmid": 1002, "link": "https://images.cdn.convoypanel.com/ubuntu/ubuntu-22-04-amd64.vma.zst" }
-            ]
-        },
-        {
             "name": "Windows Server",
             "templates": [
                 { "name": "Windows Server 2019", "vmid": 2000, "link": "https://images.cdn.convoypanel.com/windows/windows-2019-datacenter-amd64.vma.zst" },
                 { "name": "Windows Server 2022", "vmid": 2001, "link": "https://images.cdn.convoypanel.com/windows/windows-2022-datacenter-amd64.vma.zst" }
             ]
-        },
-        {
-            "name": "CentOS",
-            "templates": [
-                { "name": "CentOS 7", "vmid": 3000, "link": "https://images.cdn.convoypanel.com/centos/centos-7-amd64.vma.zst" },
-                { "name": "CentOS 8", "vmid": 3001, "link": "https://images.cdn.convoypanel.com/centos/centos-8-amd64.vma.zst" }
-            ]
-        },
-        { "name": "Debian", "templates": [{ "name": "Debian 11", "vmid": 4000, "link": "https://images.cdn.convoypanel.com/debian/debian-11-amd64.vma.zst" }] },
-        { "name": "Rocky Linux", "templates": [{ "name": "Rocky Linux 8", "vmid": 5000, "link": "https://images.cdn.convoypanel.com/rocky-linux/rocky-linux-8-amd64.vma.zst" }] }
-    ]
+        }
     "#;
 
     let groups: Vec<Group> = serde_json::from_str(data).unwrap();
